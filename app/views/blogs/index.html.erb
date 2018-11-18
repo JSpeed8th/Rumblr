@@ -1,0 +1,28 @@
+<h1> <%= @user.fname %></h1>
+
+<h2>Add a new Recipe: </h2>
+<%= form_for @blog do |f| %>
+<%= f.text_field :title, placeholder: 'Recipe Name'%>
+<%= f.text_field :body %>
+<%= hidden_field_tag :user_id, @user.id %>
+<%= f.submit %>
+<% end %>
+<hr>
+
+<% @blogs.reverse.each do |x| %>
+  <h2><%= x.title %></h2>
+  <div><%= x.body %></div>
+  <author>Posted by: <%= x.user.fname %></author>
+
+  <br><h3>Comments: </h3>
+  <% x.comments.each do |c| %>
+    <div><%= c.user.fname %> says... <%= c.body %></div>
+  <% end %>
+
+  <% if user_signed_in? %>
+    <%= form_for([x, x.comments.build]) do |f| %>
+      <%= f.text_field :body %> <br />
+      <%= f.submit "Comment" %>
+    <% end %>
+  <% end %>
+<% end %>
