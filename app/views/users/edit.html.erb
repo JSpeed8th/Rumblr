@@ -6,6 +6,13 @@
   <div> <%= u.text_field :fname %> <%= u.text_field :lname %> </div>
   <div> <%= u.text_field :about_me, placeholder: 'About me'%> </div>
   <div> <%= u.date_field :birthdate %> </div>
-
   <%= u.submit %>
 <% end %>
+
+<br>
+<hr>
+<%= link_to "Delete Account", user_path, method: :delete %>
+<br>
+<hr>
+
+<%= link_to 'Back', :back %>

@@ -12,6 +12,13 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    user = User.find(params[:id])
+    if user.destroy
+      redirect_to '/'
+    end
+  end
+
   def show
     @user = User.find(current_user.id)
     @blogs = current_user.blogs
