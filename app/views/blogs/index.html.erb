@@ -1,4 +1,4 @@
-<h1>  <a href="/users/<%= current_user.id %>/edit"> <%= @user.fname %>  </a> </h1>
+<h1>  <a href="/users/<%= current_user.id %>"> <%= @user.fname %>  </a> </h1>
 
 <h2>Add a new Recipe: </h2>
 <%= form_for @blog do |f| %>
@@ -10,7 +10,7 @@
 <hr>
 
 <% @blogs.reverse.each do |x| %>
-  <h2><%= x.title %></h2>
+  <h3> <a href="/blogs/<%= x.id %>/edit"> <%= x.title %> </a> </h3>
   <div><%= x.body %></div>
   <author>Posted by: <%= x.user.fname %></author>
 

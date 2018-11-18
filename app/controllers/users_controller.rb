@@ -2,7 +2,6 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
 
   def edit
-    # @user = User.find(params[:id])
     @user = User.find(current_user.id)
   end
 
@@ -11,6 +10,13 @@ class UsersController < ApplicationController
     if user.update(user_params)
       redirect_to '/'
     end
+  end
+
+  def show
+    @user = User.find(current_user.id)
+    @blogs = current_user.blogs
+    @length_of_users = User.all.length
+    @user_array = []
   end
 
   private

@@ -1,0 +1,50 @@
+<!-- Displays a list of 5 random users linking to their profiles. -->
+
+<!-- while the user array does not equal the length of overall users execute this block of code...if random user number is equal to 0 make it a 1. -->
+<div class="other_users">
+  <h3> Meet your fellow bakers</h3>
+  <!-- If there are less than 5 users signed to our site execute the nested while loop...while our user array is not equal to the length of overall users...-->
+  <% if @length_of_users < 5 %>
+    <% while @user_array != @length_of_users %>
+      <% num = rand(@length_of_users) %>
+      <!-- if random user number is equal to 0 make it a 1. I do this because rand() method indexes, meaning that a 0 output, represents 1. Since user_id start at 1, I have to reasign 0 into to a 1. -->
+      <% if num === 0 %>
+        <% num = 1 %>
+        <% end %>
+      <!-- If user_array does not include num, push it into array  -->
+      <% if !@user_array.include? num %>
+        <% @user_array.push(num) %>
+      <% end %>
+    <% end %>
+  <% else %>
+    <% while @user_array != 5 %>
+      <% num = rand(@length_of_users) %>
+      <!-- if random user number is equal to 0 make it a 1. I do this because rand number method indexes, meaning that a 0 output, represents 1. Since there aren't any 0 user_ids, I have to convert reasign it to a 1. -->
+      <% if num === 0 %>
+        <% num = 1 %>
+        <% end %>
+      <!-- If user_array does not include num, push it into array  -->
+      <% if !@user_array.include? num %>
+        <% @user_array.push(num) %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+    <!-- If there's only one user, break out of conditional without displaying any users. -->
+    <% if @length_of_users === 1 %>
+    <% elsif @length_of_users < 5 %>
+      <% (0..@user_array).each do |number| %>
+        <% next_user = User.find(number) %>
+        <ul>
+          <li> <a href="/users/<%= next_user.id %>"> <%= next_user.fname %> <%= next_user.lname %> </a> </li>
+        </ul>
+      <% end %>
+    <% else %>
+      <% (0..5).each do |number| %>
+        <% next_user = User.find(number) %>
+        <ul>
+          <li> <a href="/users/<%= next_user.id %>"> <%= next_user.fname %> <%= next_user.lname %> </a> </li>
+        </ul>
+      <% end %>
+    <% end %>
+</div>
