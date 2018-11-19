@@ -1,30 +1,35 @@
+<div class= "about_me_wrapper">
+  <div class="user_wallpaper_wrapper">
+    <div class="name_and_info">
+      <h2> <a class="user_name" href="/users/<%= current_user.id %>/edit"> <%= @user.fname %> <%= @user.lname %> </a> </h2>
 
-<h1> Show Page </h1>
-
-<div class="user_info_wrapper">
-  <h3> <a href="/users/<%= current_user.id %>/edit"> <%= @user.fname %> <%= @user.lname %> </a> </h3>
-  <!-- If current user's about me is not filled, display placeholder text which links to edit view. Otherwise display their about me content. -->
-  <% if @user.about_me != '' %>
-  <div> <%= @user.about_me %> </div>
-  <% else %>
-  <div>  <a href="/users/<%= current_user.id %>/edit"> <p>Tell us about yourself</p> </a> <div>
-    <% end %>
-</div>
-
-<div class="users_wall">
-  <% @blogs.reverse.each do |b| %>
-    <div class="wall_posts">
-      <h3> <a href="/blogs/<%= b.id %>/edit"> <%= b.title %> </a> </h3>
-      <p> <%= b.body %> </p>
-      <time datetime= "<%= b.updated_at %>"> <%= b.updated_at %> </time> <br />
-      <author> By: <%= b.user.fname %> <%= b.user.lname %> </author>
-
-      <div class="wall_comments">
-        <br><h3>Comments: </h3>
-        <% b.comments.each do |b| %>
-        <div><%= b.user.fname %> says... <%= b.body %></div>
-        <% end %>
+      <div class="user_info_wrapper">
+        <!-- If current user's about me is not filled, display placeholder text which links to edit view. Otherwise display their about me content. -->
+        <% if @user.about_me != '' %>
+        <p> <%= @user.about_me %> <p>
+        <% else %>
+        <div>  <a href="/users/<%= current_user.id %>/edit"> <p>Tell us about yourself</p> </a> <div>
+          <% end %>
       </div>
     </div>
-  <% end %>
+    <div class="user_wallpaper"> </div>
+  </div>
+
+  <div class="users_wall">
+    <% @blogs.reverse.each do |b| %>
+      <div class="wall_posts">
+        <author> By: <%= b.user.fname %> <%= b.user.lname %> </author>
+        <h3> <a href="/blogs/<%= b.id %>/edit"> <%= b.title %> </a> </h3>
+        <p> <%= b.body %> </p>
+        <time datetime= "<%= b.updated_at %>"> <%= b.updated_at %> </time> <br />
+
+        <div class="wall_comments">
+          <br><h3>Comments: </h3>
+          <% b.comments.each do |b| %>
+          <div><%= b.user.fname %> says... <%= b.body %></div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>

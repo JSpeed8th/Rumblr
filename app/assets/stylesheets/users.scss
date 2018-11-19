@@ -1,6 +1,32 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-h2 {
-  color: green;
+.about_me_wrapper {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 74px;
+  background-color: white;
+}
+
+.user_wallpaper_wrapper {
+  display: grid;
+  grid-template-columns: .6fr 1.4fr;
+  height: 300px;
+  width: 80vw;
+  background-color: blue;
+  margin: 0 auto;
+}
+
+.name_and_info {
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0px 2px 10px grey;
+}
+
+.user_name {
+  font-size: 1.5em;
+}
+
+.users_wall {
+  margin-top: 25px;
 }

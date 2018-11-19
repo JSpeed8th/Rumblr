@@ -7,6 +7,7 @@ class BlogsController < ApplicationController
     @blog = Blog.new
     @comments = Comment.all
     @comment = Comment.new
+    @allUsers = User.all
     # @blogSingle = Blog.find(params[:id])
   end
 

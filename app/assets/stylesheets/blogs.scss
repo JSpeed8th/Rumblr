@@ -1,3 +1,67 @@
 // Place all the styles related to the blogs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr .7fr;
+  grid-column-gap: 7px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.blogpost-wrapper, .posted-blog-wrapper, .other-users-wrapper {
+  display: inline-block;
+  border-radius: 2px;
+  background-color: white;
+  padding: 20px;
+}
+
+.blogpost-wrapper {
+  height: 300px;
+}
+
+.posted-blog-wrapper {
+  height: 78vh;
+  overflow: auto;
+}
+
+.bottom-border {
+  border-bottom: 1px solid #dbdbdb;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.other-users-wrapper {
+  height: 200px;
+}
+
+.recipe-name {
+  width: 322px;
+}
+
+.submit-btn {
+  width: 333px;
+}
+
+.recipe-name, .recipe-steps {
+    padding: 5px;
+    border-right: 0px;
+    border-left: 0px;
+}
+
+.recipe-steps {
+  width: 322px;
+  height: 100px;
+  resize: none;
+  border: 1px solid #dbdbdb;
+  border-top: none;
+}
+
+.comment-field {
+  width: 98%;
+  border-radius: 10px;
+  border: 1px solid #dbdbdb;
+  padding: 0 5px;
+}
