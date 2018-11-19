@@ -13,3 +13,49 @@
  *= require_tree .
  *= require_self
  */
+
+ nav {
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr;
+
+   background-color: pink;
+   padding: 10px 15px;
+   height: 60px;
+ }
+
+ .padding-right-zero {
+    padding-right: 0px;
+ }
+
+li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.company_name, .main-links {
+  display: inline-block;
+  text-align: center;
+  margin-left: 25px;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.sign_out {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  /* text-align: right; */
+  font-size: 14px;
+  margin-top: 7px;
+}
+
+.company_name {
+  font-family: 'Aref Ruqaa', serif;
+}

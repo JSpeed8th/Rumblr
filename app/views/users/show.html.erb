@@ -1,3 +1,4 @@
+
 <h1> Show Page </h1>
 
 <div class="user_info_wrapper">
@@ -17,6 +18,13 @@
       <p> <%= b.body %> </p>
       <time datetime= "<%= b.updated_at %>"> <%= b.updated_at %> </time> <br />
       <author> By: <%= b.user.fname %> <%= b.user.lname %> </author>
+
+      <div class="wall_comments">
+        <br><h3>Comments: </h3>
+        <% b.comments.each do |b| %>
+        <div><%= b.user.fname %> says... <%= b.body %></div>
+        <% end %>
+      </div>
     </div>
   <% end %>
 </div>

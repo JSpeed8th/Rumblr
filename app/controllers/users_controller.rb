@@ -22,6 +22,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(current_user.id)
     @blogs = current_user.blogs
+    @comments = Comment.all
     @length_of_users = User.all.length
     @user_array = []
   end
