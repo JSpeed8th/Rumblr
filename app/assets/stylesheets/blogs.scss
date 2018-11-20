@@ -25,6 +25,7 @@
 .posted-blog-wrapper {
   height: 78vh;
   overflow: auto;
+  min-width: 250px;
 }
 
 .bottom-border {
@@ -35,14 +36,24 @@
 
 .other-users-wrapper {
   height: 200px;
+  min-width: 200px;
+}
+
+.other-users-wrapper h3 {
+  margin-bottom: 20px;
 }
 
 .recipe-name {
   width: 322px;
+  border-bottom: none;
 }
 
 .submit-btn {
-  width: 333px;
+  width: 334px;
+  background-color: #f2efef;
+  border: none;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .recipe-name, .recipe-steps {
@@ -55,13 +66,39 @@
   width: 322px;
   height: 100px;
   resize: none;
-  border: 1px solid #dbdbdb;
-  border-top: none;
+  border: .1px solid #dbdbdb;
+  border-bottom: none;
 }
 
 .comment-field {
-  width: 98%;
-  border-radius: 10px;
+  display: block;
+  width: 95%;
+  border-radius: 15px;
   border: 1px solid #dbdbdb;
-  padding: 0 5px;
+  padding: 5px 10px;
+  margin: 0 auto;
+}
+
+.blogpost_body {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 25px 0;
+}
+
+.blogpost_title {
+  font-size: 1.2em;
+  margin: 15px 0;
+}
+
+.comments_title {
+  margin: 5px 0;
+}
+
+.blogpost_comments {
+  margin-bottom: 10px;
+}
+
+.bold {
+  font-weight: bold;
+  color: black;
 }

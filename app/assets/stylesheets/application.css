@@ -19,12 +19,18 @@
    grid-template-columns: 1fr;
    grid-template-rows: 1fr;
 
-   background-color: pink;
+   background-color: #F0BB4B;
    padding: 8px 15px;
    height: 58px;
    position: fixed;
    top: 0;
    width: 98vw;
+   box-shadow: 2px 0 2px 0 black;
+ }
+
+ nav a {
+   color: #704C22;
+   font-weight: bold;
  }
 
  .padding-right-zero {
@@ -39,6 +45,10 @@ li {
 
 a {
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .company_name, .main-links {
@@ -57,10 +67,19 @@ a {
   /* text-align: right; */
   font-size: 14px;
   margin-top: 7px;
+  margin-right: 15px;
 }
 
 .company_name {
-  font-family: 'Aref Ruqaa', serif;
   margin: 0;
   margin-left: 25px;
+}
+
+.company_name a {
+  font-family: 'Aref Ruqaa', serif;
+  color: #704C22;
+}
+
+.company_name a:hover {
+  text-decoration: none;
 }

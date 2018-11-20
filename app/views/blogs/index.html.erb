@@ -4,7 +4,7 @@
     <h2>Share a new Recipe: </h2>
     <%= form_for @blog do |f| %>
     <%= f.text_field :title, placeholder: 'Recipe Name', class: "recipe-name"%>
-    <%= f.text_area :body, class: "recipe-steps", placeholder: "type your recipe here."%>
+    <%= f.text_area :body, class: "recipe-steps", placeholder: "type your recipe here.", autocomplete: 'off';%>
     <%= hidden_field_tag :user_id, @user.id %>
     <%= f.submit 'share', class: "submit-btn"%>
     <% end %>
@@ -12,19 +12,18 @@
 
   <div class= "posted-blog-wrapper">
     <% @blogs.reverse.each do |x| %>
-      <h3> <a href="/blogs/<%= x.id %>/edit"> <%= x.title %> </a> </h3>
+      <h2 class="blogpost_title"> <a href="/blogs/<%= x.id %>/edit"> <%= x.title %> </a> </h2>
       <author>Posted by: <a href="/users/<%= x.id %>"> <%= x.user.fname %> </a></author>
-      <div><%= x.body %></div>
+      <p class="blogpost_body"><%= x.body %></p>
       <time datetime= "<%= x.updated_at %>">published: <%= x.updated_at %> </time>
-
-      <br><h3>Comments: </h3>
+      <br><h3 class="comments_title">Comments: </h3>
       <% x.comments.each do |c| %>
-        <div><%= c.user.fname %> says... <%= c.body %></div>
+        <p class="blogpost_comments"> <a href="/blogs/<%= x.id %>/edit"> <span class="bold"><%= c.user.fname %></span> </a> says... <%= c.body %></p>
       <% end %>
 
       <% if user_signed_in? %>
         <%= form_for([x, x.comments.build]) do |f| %>
-          <%= f.text_field :body, class:"comment-field", placeholder: "what's on your mind?" %> <br />
+          <%= f.text_field :body, class:"comment-field", placeholder: "what's on your mind?", autocomplete: 'off' %> <br />
 
         <% end %>
         <div class="bottom-border"> </div>
@@ -33,7 +32,7 @@
 
   </div>
   <div class="other-users-wrapper">
-    <h3>Make Aquaintence With Our Other Fellow Bakers</h3>
+    <h3>Meet Your Fellow Bakers</h3>
     <% @allUsers.each do |u| %>
       <ul>
         <li><a href="/users/<%= u.id %>"> <%= u.fname %> <%= u.lname %> </a></li>

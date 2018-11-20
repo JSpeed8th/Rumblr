@@ -12,7 +12,7 @@
   <body>
     <nav>
       <% if user_signed_in? %>
-        <h1 class="company_name">taste buds</h1>
+        <h1 class="company_name"> <a href="/"> taste buds </a> </h1>
         <li class="sign_out"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
         <div class="main-links">
           <li><%= link_to "Home", root_path %> </li>
@@ -21,7 +21,7 @@
         <!-- <#% else %>
         <li><#%= link_to "Sign Up", new_user_registration_path %></li> -->
       <% else %>
-          <h1 class="company_name no-margin">taste buds</h1>
+          <h1 class="company_name">taste buds</h1>
       <% end %>
     </nav>
     <%= yield %>

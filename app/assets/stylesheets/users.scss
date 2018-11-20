@@ -11,16 +11,27 @@
 .user_wallpaper_wrapper {
   display: grid;
   grid-template-columns: .6fr 1.4fr;
-  height: 300px;
+  height: 350px;
   width: 80vw;
   background-color: blue;
   margin: 0 auto;
+}
+
+.user_info_wrapper{
+  margin: 10px 0;
+}
+
+.user_wallpaper {
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
 .name_and_info {
   padding: 10px;
   background-color: white;
   box-shadow: 0px 2px 10px grey;
+  height: 350px;
 }
 
 .user_name {
@@ -28,5 +39,43 @@
 }
 
 .users_wall {
-  margin-top: 25px;
+  margin: 0 auto;
+  background-color: white;
+  width: 75vw;
+  padding: 70px 0px;
+}
+
+.blogpost_title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.blogpost_body {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 15px 0;
+}
+
+.bottom-border {
+  border-bottom: 1px solid #dbdbdb;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.profile_pics {
+  width: 150px;
+  height: 150px;
+  background-color: grey;
+  margin: 20px auto;
+  border-radius: 50%;
+}
+
+.center {
+  text-align: center;
+}
+
+.about_me_container {
+  height: 50px;
+  overflow: scroll;
 }

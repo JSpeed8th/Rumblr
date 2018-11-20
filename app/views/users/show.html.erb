@@ -1,26 +1,30 @@
 <div class= "about_me_wrapper">
   <div class="user_wallpaper_wrapper">
     <div class="name_and_info">
-      <h2> <a class="user_name" href="/users/<%= current_user.id %>/edit"> <%= @user.fname %> <%= @user.lname %> </a> </h2>
+      <div class="profile_pics"></div>
+      <h2 class="center"> <a class="user_name" href="/users/<%= current_user.id %>/edit"> <%= @user.fname %> <%= @user.lname %> </a> </h2>
 
       <div class="user_info_wrapper">
         <!-- If current user's about me is not filled, display placeholder text which links to edit view. Otherwise display their about me content. -->
+        <h2> About Me </h2>
         <% if @user.about_me != '' %>
-        <p> <%= @user.about_me %> <p>
+        <p class="about_me_container"> <%= @user.about_me %> <p>
         <% else %>
-        <div>  <a href="/users/<%= current_user.id %>/edit"> <p>Tell us about yourself</p> </a> <div>
+        <a class="about_me_container" href="/users/<%= current_user.id %>/edit"> <p>Tell us about yourself</p> </a>
           <% end %>
       </div>
     </div>
-    <div class="user_wallpaper"> </div>
+    <div>
+      <img class="user_wallpaper" src="../../assets/images/iceland1.jpg" alt="Grettisgata Street Sign">
+    </div>
   </div>
 
   <div class="users_wall">
     <% @blogs.reverse.each do |b| %>
       <div class="wall_posts">
-        <author> By: <%= b.user.fname %> <%= b.user.lname %> </author>
-        <h3> <a href="/blogs/<%= b.id %>/edit"> <%= b.title %> </a> </h3>
-        <p> <%= b.body %> </p>
+        <h2 class="blogpost_title"> <a href="/blogs/<%= b.id %>/edit"> <%= b.title %> </a> </h2>
+        <author>Posted by: <a href="/users/<%= b.id %>"> <%= b.user.fname %> </a></author>
+        <p class="blogpost_body"><%= b.body %></p>
         <time datetime= "<%= b.updated_at %>"> <%= b.updated_at %> </time> <br />
 
         <div class="wall_comments">
@@ -30,6 +34,7 @@
           <% end %>
         </div>
       </div>
+      <div class="bottom-border"> </div>
     <% end %>
   </div>
 </div>
