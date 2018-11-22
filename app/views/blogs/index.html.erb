@@ -35,7 +35,7 @@
     <h3>Meet Your Fellow Bakers</h3>
     <% @allUsers.each do |u| %>
       <ul>
-        <li><a href="/users/<%= u.id %>"> <%= u.fname %> <%= u.lname %> </a></li>
+        <li><a class="fellow-bakers" href="/users/<%= u.id %>"> <%= u.fname %> <%= u.lname %> </a></li>
       </ul>
     <% end %>
   </div>

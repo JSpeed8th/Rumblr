@@ -5,27 +5,31 @@
 .grid-wrapper {
   display: grid;
   grid-template-columns: 1fr 1.3fr .7fr;
-  grid-column-gap: 7px;
-  width: 80%;
+  grid-column-gap: 10px;
+  width: 90%;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 98px;
 }
 
 .blogpost-wrapper, .posted-blog-wrapper, .other-users-wrapper {
   display: inline-block;
-  border-radius: 2px;
+  border-radius: 5px;
   background-color: white;
   padding: 20px;
 }
 
 .blogpost-wrapper {
   height: 300px;
+  padding: 15px;
+  text-align: center;
+
 }
 
 .posted-blog-wrapper {
   height: 78vh;
   overflow: auto;
   min-width: 250px;
+  padding: 25px 56px;
 }
 
 .bottom-border {
@@ -54,6 +58,7 @@
   border: none;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
+  height: 27px;
 }
 
 .recipe-name, .recipe-steps {
@@ -82,7 +87,6 @@
 .blogpost_body {
   font-weight: bold;
   font-size: 1.5em;
-  margin: 25px 0;
 }
 
 .blogpost_title {
@@ -91,14 +95,25 @@
 }
 
 .comments_title {
-  margin: 5px 0;
+  margin: 15px 0;
 }
 
 .blogpost_comments {
   margin-bottom: 10px;
+  background-color: #F2EFEF;
+  border-radius: 15px;
+  padding: 5px 15px;
+}
+
+.blogpost_comments a:first-child{
+  font-size: 18px;
 }
 
 .bold {
   font-weight: bold;
   color: black;
+}
+
+.fellow-bakers {
+  font-size: 1.5em;
 }
