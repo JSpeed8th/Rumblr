@@ -18,7 +18,7 @@
       <time datetime= "<%= x.updated_at %>">published: <%= x.updated_at %> </time>
       <br><h3 class="comments_title">Comments: </h3>
       <% x.comments.each do |c| %>
-        <p class="blogpost_comments"> <a href="/users/<%= x.id %>/edit"> <span class="bold"><%= c.user.fname %></span> </a> says... <%= c.body %></p>
+        <p class="blogpost_comments"> <a href="/users/<%= x.id %>"> <span class="bold"><%= c.user.fname %></span> </a> says... <%= c.body %></p>
       <% end %>
 
       <% if user_signed_in? %>
