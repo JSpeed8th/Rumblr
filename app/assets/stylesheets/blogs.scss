@@ -26,7 +26,7 @@
 }
 
 .posted-blog-wrapper {
-  height: 78vh;
+  height: 79vh;
   overflow: auto;
   min-width: 250px;
   padding: 25px 56px;
@@ -62,9 +62,9 @@
 }
 
 .recipe-name, .recipe-steps {
-    padding: 5px;
-    border-right: 0px;
-    border-left: 0px;
+  padding: 5px;
+  border-right: 0px;
+  border-left: 0px;
 }
 
 .recipe-steps {
@@ -89,7 +89,7 @@
 .blogpost_body {
   font-weight: bold;
   font-size: 1.5em;
-  word-break: break-all;
+  word-break: break-word;
 }
 
 .blogpost_title {
@@ -106,7 +106,7 @@
   background-color: #F2EFEF;
   border-radius: 15px;
   padding: 5px 15px;
-  word-break: break-all;
+  word-break: break-word;
 }
 
 .blogpost_comments a:first-child{
