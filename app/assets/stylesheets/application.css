@@ -21,10 +21,10 @@
 
    background-color: #F0BB4B;
    padding: 8px 15px;
-   height: 50px;
+   height: 55px;
    position: fixed;
    top: 0;
-   width: 98vw;
+   width: 99vw;
    box-shadow: 2px 0 2px 0 black;
  }
 
@@ -53,7 +53,7 @@ a:hover {
 
 .company_name, .main-links {
   display: inline-block;
-  text-align: center;
+  /* text-align: center; */
   margin-left: 25px;
 }
 
@@ -77,7 +77,12 @@ a:hover {
 
 .company_name a {
   font-family: 'Aref Ruqaa', serif;
-  color: #704C22;
+  color: black;
+}
+
+.company_name_signed_out {
+  font-family: 'Aref Ruqaa', serif;
+  margin: 0;
 }
 
 .company_name a:hover {

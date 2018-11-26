@@ -21,6 +21,7 @@ class BlogsController < ApplicationController
 
   def edit
     @blog = Blog.find(params[:id])
+    @user = current_user
   end
 
   def update
