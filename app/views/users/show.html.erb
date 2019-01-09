@@ -2,7 +2,11 @@
   <div class="user_wallpaper_wrapper">
     <div class="name_and_info">
       <div class="profile_pics"></div>
+      <% if @user.id != current_user.id %>
+        <h2 class="user_name center"> <%= @user.fname %> <%= @user.lname %> </h2>
+      <% else %>
       <h2 class="center"> <a class="user_name" href="/users/<%= current_user.id %>/edit"> <%= @user.fname %> <%= @user.lname %> </a> </h2>
+      <% end %>
 
       <div class="user_info_wrapper">
         <!-- If current user's about me is not filled, display placeholder text which links to edit view. Otherwise display their about me content. -->
@@ -11,16 +15,16 @@
         <p class="about_me_container"> <%= @user.about_me %> <p>
         <% else %>
         <a class="about_me_container" href="/users/<%= current_user.id %>/edit"> <p>Tell us about yourself</p> </a>
-          <% end %>
+        <% end %>
       </div>
     </div>
     <div>
-      <img class="user_wallpaper" src="../../assets/images/iceland1.jpg" alt="Grettisgata Street Sign">
+      <div class="user_wallpaper"></div>
     </div>
   </div>
 
   <div class="users_wall">
-    <% @blogs.reverse.each do |b| %>
+    <% @user.blogs.reverse.each do |b| %>
       <div class="wall_posts">
         <h2 class="blogpost_title"> <a href="/blogs/<%= b.id %>/edit"> <%= b.title %> </a> </h2>
         <author>Posted by: <a href="/users/<%= b.id %>"> <%= b.user.fname %> </a></author>

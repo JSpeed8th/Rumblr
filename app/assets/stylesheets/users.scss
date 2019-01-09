@@ -4,7 +4,7 @@
 .about_me_wrapper {
   width: 80%;
   margin: 0 auto;
-  margin-top: 74px;
+  margin-top: 71px;
   background-color: white;
 }
 
@@ -22,9 +22,12 @@
 }
 
 .user_wallpaper {
+  background-image: url('https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   background-position: center;
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  height: 95%;
+  width: 100%;
 }
 
 .name_and_info {
