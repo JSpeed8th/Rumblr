@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   def update
     user = User.find(current_user.id)
     if user.update(user_params)
-      redirect_to '/users/current_user.id'
+      redirect_to "/users/#{user.id}"
     end
   end
 
@@ -20,8 +20,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(current_user.id)
-    @blogs = current_user.blogs
+    @user = User.find(params[:id])
+    @blogs = @user.blogs
     @comments = Comment.all
     @length_of_users = User.all.length
     @user_array = []

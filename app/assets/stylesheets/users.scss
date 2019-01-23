@@ -9,9 +9,7 @@
 }
 
 .user_wallpaper_wrapper {
-  display: grid;
-  grid-template-columns: .6fr 1.4fr;
-  height: 350px;
+  display: flex;
   width: 80vw;
   background-color: blue;
   margin: 0 auto;
@@ -21,12 +19,15 @@
   margin: 10px 0;
 }
 
+.user_info_wrapper h2 {
+  margin-bottom: 0;
+}
+
 .user_wallpaper {
   background-image: url('https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   background-position: center;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  height: 95%;
   width: 100%;
 }
 
@@ -35,10 +36,11 @@
   background-color: white;
   box-shadow: 0px 2px 10px grey;
   height: 350px;
+  width: 25vw;
 }
 
 .user_name {
-  font-size: 1.5em;
+  font-size: 2.5vw;
 }
 
 .users_wall {
@@ -83,8 +85,13 @@
 }
 
 .about_me_container {
-  height: 50px;
+  height: 10vh;
   overflow: scroll;
+  border: 1px solid orange;
+}
+
+.about_me_container p {
+  margin: 0;
 }
 
 // SESSIONS STYLING
