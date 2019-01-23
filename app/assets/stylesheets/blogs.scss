@@ -4,11 +4,15 @@
 
 .grid-wrapper {
   display: grid;
+  background-image: url('pinstripe-background.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   grid-template-columns: 1fr 1.3fr .7fr;
-  grid-column-gap: 10px;
-  width: 90%;
-  margin: 0 auto;
-  margin-top: 98px;
+  grid-column-gap: 25px;
+  padding: 40px 30px;
+  margin: 0;
+  margin-top: 9.5vh;
+  height: 79.4vh;
 }
 
 .blogpost-wrapper, .posted-blog-wrapper, .other-users-wrapper {
@@ -26,7 +30,7 @@
 }
 
 .posted-blog-wrapper {
-  height: 79vh;
+  height: 75vh;
   overflow: auto;
   min-width: 250px;
   padding: 25px 56px;
