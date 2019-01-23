@@ -18,7 +18,10 @@
    display: grid;
    grid-template-columns: 1fr;
    grid-template-rows: 1fr;
-
+   background-image: url('https://images.pexels.com/photos/122458/pexels-photo-122458.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+   background-position: center;
+   background-size: auto;
+   background-repeat: no-repeat;
    background-color: #F0BB4B;
    padding: 8px 15px;
    height: 55px;

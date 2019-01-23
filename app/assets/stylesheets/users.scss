@@ -83,7 +83,51 @@
   overflow: scroll;
 }
 
+// SESSIONS STYLING
+
 .log-in-wrapper {
-  margin-top: 98px;
-  margin-left: 20px;
+ background-image: url('https://images.pexels.com/photos/1310777/pexels-photo-1310777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-size: 100% 120%;
+  height: 89vh;
+  margin: 0;
+  margin-top: 71px;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  color: #dc9b12;
+  font-size: 1.5vw;
+  font-family: 'Aref Ruqaa', serif;
 }
+
+.session-info {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.5);
+  padding: 1% 5%;
+}
+
+.session-info .field,
+.session-info .actions {
+  line-height: 1.5;
+}
+
+.session-info .field input {
+  border: none;
+  background: white !important;
+  background-color: transparent !important;
+  border-bottom: 2px solid white;
+  text-align: center;
+  padding: 5px;
+  outline: none;
+  color: white;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0px 9999px white;
+}
+
+.whatever {
+  background-color: red !important;}
