@@ -10,9 +10,8 @@
 
 .user_wallpaper_wrapper {
   display: flex;
-  width: 80vw;
-  background-color: blue;
   margin: 0 auto;
+  height: 55vh;
 }
 
 .user_info_wrapper{
@@ -21,6 +20,7 @@
 
 .user_info_wrapper h2 {
   margin-bottom: 0;
+  font-size: 1.7vw;
 }
 
 .user_wallpaper {
@@ -41,6 +41,14 @@
 
 .user_name {
   font-size: 2.5vw;
+  text-decoration: none;
+  transition: .2s;
+  color: #4b3506;
+}
+.user_name:hover {
+  color: grey;
+  text-decoration: none;
+  transition: .2s;
 }
 
 .users_wall {
@@ -87,7 +95,7 @@
 .about_me_container {
   height: 10vh;
   overflow: scroll;
-  border: 1px solid orange;
+  // border: 1px solid orange;
 }
 
 .about_me_container p {
