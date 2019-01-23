@@ -27,14 +27,16 @@
     <% @user.blogs.reverse.each do |b| %>
       <div class="wall_posts">
         <h2 class="blogpost_title"> <a href="/blogs/<%= b.id %>/edit"> <%= b.title %> </a> </h2>
-        <author>Posted by: <a href="/users/<%= b.id %>"> <%= b.user.fname %> </a></author>
-        <p class="blogpost_body"><%= b.body %></p>
-        <time datetime= "<%= b.updated_at %>"> <%= b.updated_at %> </time> <br />
+        <author><span class="bold">Posted by</span>: <a href="/users/<%= b.user.id %>"> <%= b.user.fname %> </a></author>
+        <p class="blogpost-body"><%= b.body %></p>
+        <time datetime= "<%= b.updated_at %>"><span class="bold">Posted</span>: <%= b.updated_at %> </time> <br />
 
         <div class="wall_comments">
           <br><h3>Comments: </h3>
           <% b.comments.each do |b| %>
-          <div><%= b.user.fname %> says... <%= b.body %></div>
+          <div>
+            <a href="/users/<%= b.user.id %>"> <span class="bold"><%= b.user.fname %></span> </a>
+           says... <%= b.body %></div>
           <% end %>
         </div>
       </div>

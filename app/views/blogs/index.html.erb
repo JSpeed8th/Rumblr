@@ -13,10 +13,11 @@
 
   <div class= "posted-blog-wrapper">
     <% @blogs.reverse.each do |x| %>
-      <h2 class="blogpost_title"> <a href="/blogs/<%= x.id %>/edit"> <%= x.title %> </a> </h2>
-      <author>Posted by: <a href="/users/<%= @user.id %>"> <%= x.user.fname %> </a></author>
-      <p class="blogpost_body"><%= x.body %></p>
-      <time datetime= "<%= x.updated_at %>">published: <%= x.updated_at %> </time>
+    <a href="/blogs/<%= x.id %>/edit"> <div class="edit-btn">edit</div> </a>
+      <h2 class="blogpost-title">  <%= x.title %></h2>
+      <author><span class="bold">Posted by</span>: <a href="/users/<%= @user.id %>"> <%= x.user.fname %> </a></author>
+      <p class="blogpost-body"><%= x.body %></p>
+      <time datetime= "<%= x.updated_at %>"><span class="bold">published</span>: <%= x.updated_at %> </time>
       <br><h3 class="comments_title">Comments: </h3>
       <% x.comments.each do |c| %>
         <p class="blogpost_comments"> <a href="/users/<%= x.id %>"> <span class="bold"><%= c.user.fname %></span> </a> says... <%= c.body %></p>
