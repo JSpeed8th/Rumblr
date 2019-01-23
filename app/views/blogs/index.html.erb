@@ -1,3 +1,4 @@
+<div class="background-image">
 <div class="grid-wrapper">
   <div class= "blogpost-wrapper">
     <h1>  <a href="/users/<%= current_user.id %>"> <%= @user.fname %> <%= @user.lname %>  </a> </h1>
@@ -13,7 +14,7 @@
   <div class= "posted-blog-wrapper">
     <% @blogs.reverse.each do |x| %>
       <h2 class="blogpost_title"> <a href="/blogs/<%= x.id %>/edit"> <%= x.title %> </a> </h2>
-      <author>Posted by: <a href="/users/<%= x.id %>"> <%= x.user.fname %> </a></author>
+      <author>Posted by: <a href="/users/<%= @user.id %>"> <%= x.user.fname %> </a></author>
       <p class="blogpost_body"><%= x.body %></p>
       <time datetime= "<%= x.updated_at %>">published: <%= x.updated_at %> </time>
       <br><h3 class="comments_title">Comments: </h3>
@@ -43,4 +44,5 @@
       </ul>
     <% end %>
   </div>
+</div>
 </div>
