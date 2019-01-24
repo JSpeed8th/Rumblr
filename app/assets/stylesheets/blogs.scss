@@ -27,11 +27,15 @@
   text-align: center;
 }
 
+.blogpost-wrapper h2 {
+  font-size: 2vw;
+}
+
 .blogpost-wrapper,
 .other-users-wrapper {
   position: sticky;
-  –webkit-overflow-scrolling: touch;
-  top: 15vh;
+  min-width: 200px;
+  top: 15.5vh;
 }
 
 // .blogpost-wrapper,
