@@ -16,17 +16,20 @@
 
  body {
   background-image: url(pinstripe-background.jpg);
+  background-image: url(https://images.pexels.com/photos/616401/pexels-photo-616401.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  /*background: #5f357d;
+  background: radial-gradient(circle farthest-corner at right bottom, #ffd08a 0%, #ffa376 28%, #d26578 52%, #682a84 79%, #241668 100%);*/
   height: 100vh;
   background-attachment: fixed;
- }
+  }
 
  nav {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  background-image: url(navbar-texture.jpeg);
+  background-image: url(navbar-texture-two.jpeg);
   background-position: center;
   background-size: 100% 700%;
   background-repeat: no-repeat;

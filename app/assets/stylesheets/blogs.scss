@@ -2,14 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.background-image {  padding: 36px 30px;
+.background-image {  padding: 36px 0px;
 }
 
 .grid-wrapper {
   display: grid;
   grid-template-columns: 3fr 4fr 1fr;
-  grid-column-gap: 6vw;
-  margin: 0;
+  width: 75%;
+  grid-column-gap: 2vw;
+  margin: 0 auto;
   margin-top: 9.5vh;
 }
 
@@ -29,14 +30,15 @@
 .blogpost-wrapper,
 .other-users-wrapper {
   position: sticky;
+  –webkit-overflow-scrolling: touch;
   top: 15vh;
 }
 
-.blogpost-wrapper,
-.other-users-wrapper,
-.posted-blog-wrapper {
-  border: .5px solid #A5A29B;
-}
+// .blogpost-wrapper,
+// .other-users-wrapper,
+// .posted-blog-wrapper {
+//   border: .5px solid #A5A29B;
+// }
 
 .posted-blog-wrapper {
   min-width: 250px;
