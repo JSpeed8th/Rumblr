@@ -1,10 +1,17 @@
 .edit-page-top-margin {
   margin: 0 35vw;
   margin-top: 98px;
-  height: 320px;
+  height: 350px;
   width: 400px;
 }
 
 .extra-margin {
   margin: 5px;
+}
+
+.blogpost-wrapper span {
+	font-size: 2.7vw;
+    text-decoration: none;
+    transition: .2s;
+    color: #4b3506;
 }

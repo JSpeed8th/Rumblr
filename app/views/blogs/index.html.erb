@@ -15,7 +15,7 @@
     <% @blogs.reverse.each do |x| %>
     <a href="/blogs/<%= x.id %>/edit"> <div class="edit-btn">edit</div> </a>
       <h2 class="blogpost-title">  <%= x.title %></h2>
-      <author><span class="bold">Posted by</span>: <a href="/users/<%= @user.id %>"> <%= x.user.fname %> </a></author>
+      <author><span class="bold">Posted by</span>: <a href="/users/<%= x.user.id %>"> <%= x.user.fname %> </a></author>
       <p class="blogpost-body"><%= x.body %></p>
       <time datetime= "<%= x.updated_at %>"><span class="bold">published</span>: <%= x.updated_at %> </time>
       <br><h3 class="comments_title">Comments: </h3>

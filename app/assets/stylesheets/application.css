@@ -15,26 +15,29 @@
  */
 
  body {
-  background-image: url('pinstripe-background.jpg');
+  background-image: url(pinstripe-background.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  height: 100vh;
+  background-attachment: fixed;
  }
 
  nav {
-   display: grid;
-   grid-template-columns: 1fr;
-   grid-template-rows: 1fr;
-   background-image: url('navbar-texture.jpeg');
-   background-position: center;
-   background-size: 100% 700%;
-   background-repeat: no-repeat;
-   background-color: #F0BB4B;
-   padding: 8px 15px;
-   height: 55px;
-   position: fixed;
-   top: 0;
-   width: 99vw;
-   box-shadow: 2px 0 2px 0 black;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  background-image: url(navbar-texture.jpeg);
+  background-position: center;
+  background-size: 100% 700%;
+  background-repeat: no-repeat;
+  background-color: #F0BB4B;
+  padding: 8px 15px;
+  height: 55px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 99vw;
+  box-shadow: 2px 0 10px 0 black;
  }
 
  nav a {
