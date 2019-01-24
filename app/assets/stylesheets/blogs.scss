@@ -16,7 +16,7 @@
 
 .blogpost-wrapper, .posted-blog-wrapper, .other-users-wrapper {
   display: inline-block;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: white;
   padding: 20px;
 }
@@ -35,7 +35,7 @@
 .other-users-wrapper {
   position: sticky;
   min-width: 200px;
-  top: 15.5vh;
+  top: 15vh;
 }
 
 // .blogpost-wrapper,

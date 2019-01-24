@@ -15,8 +15,7 @@
  */
 
  body {
-  background-image: url(pinstripe-background.jpg);
-  background-image: url(https://images.pexels.com/photos/616401/pexels-photo-616401.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-image: url('vegetable-background.jpeg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
   /*background: #5f357d;
