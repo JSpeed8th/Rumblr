@@ -7,7 +7,7 @@
 
 .grid-wrapper {
   display: grid;
-  grid-template-columns: 3fr 4fr 1fr;
+  grid-template-columns: 3fr 4fr 2.5fr;
   width: 75%;
   grid-column-gap: 2vw;
   margin: 0 auto;
@@ -22,7 +22,7 @@
 }
 
 .blogpost-wrapper {
-  height: 300px;
+  height: fit-content;
   padding: 15px;
   text-align: center;
 }
@@ -56,7 +56,8 @@
 
 .other-users-wrapper {
   height: 200px;
-  min-width: 200px;
+  // min-width: 200px;
+  width: fit-content;
 }
 
 .other-users-wrapper h3 {

@@ -15,13 +15,11 @@
  */
 
  body {
-  background-image: url('vegetable-background.jpeg');
+  /* background-image: url('vegetable-background.jpeg'); */
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  /*background: #5f357d;
-  background: radial-gradient(circle farthest-corner at right bottom, #ffd08a 0%, #ffa376 28%, #d26578 52%, #682a84 79%, #241668 100%);*/
-  height: 100vh;
-  background-attachment: fixed;
+  background: #254250;
+  background: linear-gradient(to bottom right,#041722,#173f56,#417685);
   }
 
  nav {
