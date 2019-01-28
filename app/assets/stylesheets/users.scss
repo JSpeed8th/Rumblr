@@ -127,10 +127,11 @@
 .session-info {
   margin: 0;
   position: absolute;
-  top: 48vh;
+  top: 50vh;
   left: 50vw;
   transform: translate(-50%, -50%);
   background: rgba(0,0,0,0.7);
+  border-radius: 10px;
   padding: 1% 5%;
   padding-bottom: 6vh;
 }
@@ -142,13 +143,12 @@
 
 .session-info .field input {
   border: none;
-  background: white !important;
   background-color: transparent !important;
   border-bottom: 2px solid white;
   text-align: center;
   padding: 5px;
-  outline: none;
   color: white;
+  border-radius: 0px;
 }
 
 .login-btn {
@@ -157,6 +157,12 @@
   margin: 10px 0;
   background-color: white;
   border: 0;
+  transition: .2s;
+}
+
+.login-btn:hover {
+  background-color: lightgrey;
+  transition: .2s;
 }
 
 input:-webkit-autofill {
