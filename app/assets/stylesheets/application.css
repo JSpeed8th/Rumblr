@@ -15,11 +15,11 @@
  */
 
  body {
-  /* background-image: url('vegetable-background.jpeg'); */
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
   background: #254250;
   background: linear-gradient(to bottom right,#041722,#173f56,#417685);
+  background-repeat: no-repeat;
+  padding-top: 50px;
+
   }
 
  nav {

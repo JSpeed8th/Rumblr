@@ -115,7 +115,6 @@
   position: sticky;
   height: 100vh;
   margin: 0;
-  margin-top: 71px;
   background-repeat: no-repeat;
   background-position: center;
   text-align: center;
@@ -156,6 +155,8 @@
   border-radius: 5px;
   padding: 5px 10px;
   margin: 10px 0;
+  background-color: white;
+  border: 0;
 }
 
 input:-webkit-autofill {

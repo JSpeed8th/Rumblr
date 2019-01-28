@@ -7,7 +7,7 @@
 
 .grid-wrapper {
   display: grid;
-  grid-template-columns: 3fr 4fr 2.5fr;
+  grid-template-columns: 3fr 4fr 2fr;
   width: 75%;
   grid-column-gap: 2vw;
   margin: 0 auto;
@@ -16,13 +16,13 @@
 
 .blogpost-wrapper, .posted-blog-wrapper, .other-users-wrapper {
   display: inline-block;
+  height: fit-content;
   border-radius: 10px;
   background-color: white;
   padding: 20px;
 }
 
 .blogpost-wrapper {
-  height: fit-content;
   padding: 15px;
   text-align: center;
 }
@@ -34,7 +34,7 @@
 .blogpost-wrapper,
 .other-users-wrapper {
   position: sticky;
-  min-width: 200px;
+  position: -webkit-sticky; /* Safari */
   top: 15vh;
 }
 
@@ -160,7 +160,7 @@
 }
 
 .blogpost-wrapper a {
-  font-size: 2.7vw;
+  font-size: 2vw;
   text-decoration: none;
   transition: .2s;
   color: #4b3506;

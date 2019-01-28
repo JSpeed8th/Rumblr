@@ -1,12 +1,11 @@
-.edit-page-top-margin {
-  margin: 0 35vw;
-  margin-top: 98px;
-  height: 350px;
-  width: 400px;
-}
-
 .extra-margin {
   margin: 5px;
+  top: 30vh;
+}
+
+.top-gap {
+  margin-top: 15vh;
+  margin-bottom: 35vh;
 }
 
 .blogpost-wrapper span {
@@ -14,4 +13,28 @@
     text-decoration: none;
     transition: .2s;
     color: #4b3506;
+}
+
+.blogpost-wrapper {
+  display: block;
+  width: 300px;
+  height: fit-content;
+  margin: 0 auto;
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) {
+    .blogpost-wrapper {
+      width: 500px;
+    }
+}
+
+@media screen and (min-device-width: 1600px) {
+  .blogpost-wrapper {
+    width: 600px;
+  }
 }
